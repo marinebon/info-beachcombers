@@ -1,0 +1,119 @@
+species_code,species_common_name,species_genus,species_itis,species_sci_name,bird_or_mammal
+FISH,Fish or Shark,NA,NA,,
+LBTR,Leatherback Turtle,NA,173843,Dermochelys coriacea,
+MOLA,,NA,NA,,
+NMMA,Unidentified Not Marine Mammal,NA,NA,,
+NNNN,No Birds or Mammals on survey,NA,NA,,
+ALCD,Unidentified Alcid,NA,176967,,bird
+AMCO,American Coot,NA,176292,Fulica americana,bird
+ANMU,Ancient Murrelet,NA,177008,Synthliboramphus antiquus,bird
+ARLO,Arctic Loon,NA,174471,Gavia arctica,bird
+ASSP,Ashy Storm-petrel,NA,174634,Oceanodroma homochroa,bird
+BFAL,Black-footed Albatross,NA,174516,Diomedea nigripes,bird
+BIRD,,NA,NA,,bird
+BLKI,Black-legged Kittiwake,NA,176875,Rissa tridactyla,bird
+BLSC,Black Scoter,NA,175171,Melanitta nigra,bird
+BOGU,Bonaparte's Gull,NA,176839,Larus philadelphia,bird
+BRAC,Brandt's Cormorant,NA,174724,Phalacrocorax penicillatus,bird
+BRPE,Brown Pelican,NA,174685,Pelecanus occidentalis,bird
+BUSH,Buller's Shearwater,NA,174552,Puffinus bulleri,bird
+BVSH,Black-vented Shearwater,NA,554396,Puffinus opisthomelas,bird
+CAAU,Cassin's Auklet,NA,177013,Ptychoramphus aleuticus,bird
+CAGO,Canada Goose,NA,174999,Branta canadensis,bird
+CAGU,California Gull,NA,176829,Larus californicus,bird
+CATE,Caspian Tern,NA,176924,Sterna caspia,bird
+CHGU,California/Herring Gull,NA,824077,Larus smithsonianus,bird
+CLGR,Clark's Grebe,NA,554027,Aechmophorus clarkii,bird
+COLO,Comon Loon,NA,174469,Gavia immer,bird
+COMU,Common Murre,NA,176974,Uria aalgae,bird
+CORM,Unidentified Cormorant,NA,174714,,bird
+COTE,Common Tern,NA,176888,Sterna hirundo,bird
+CRMU,Craveri's Murrelet,NA,177010,Synthliboramphus craveri,bird
+CWGR,Clark's/Western Grebe,NA,174477,,bird
+CWGU,California/Western Gull,NA,176802,,bird
+DCCO,Double-crested Cormorant,NA,17417,Phalacrocorax auritus,bird
+DOVE,Unidentified dove/pigeon,NA,NA,,bird
+DUCK,Unidentified duck/goose,NA,NA,,bird
+EAGR,Eared Grebe,NA,174485,Podiceps nigricollis,bird
+ELTE,Elegant Tern,NA,176925,Sterna elegans,bird
+FFSH,Flesh-footed Shearwater,NA,174548,Puffinus carneipes,bird
+FOTE,Forster's Tern,NA,176887,Sterna forsteri,bird
+FTSP,Fork-tailed Storm-petrel,NA,174625,Oceanodroma furcata,bird
+GLGU,Glaucous Gull,NA,176808,Larus hyperboreus,bird
+GREB,Unidentified Grebe,NA,174477,,bird
+GULL,Unidentified Gull,NA,716802,,bird
+GWGU,Glaucous-winged Gull,NA,176814,Larus glaucescens,bird
+HEEG,Heermann's Gull,NA,176841,Larus heermanni,bird
+HERG,Herring Gull,NA,176824,Larus argentatus,bird
+HOGR,Horned Grebe,NA,174482,Podiceps auritus,bird
+HOPU,Horned Puffin,NA,177029,Fratercula corniculata,bird
+LAAL,Laysan Albatross,NA,554378,Phoebastria immutabilis,bird
+LHSP,Leach's Storm-petrel,NA,174628,Oceanodroma leucorhoa,bird
+LOON,Unidentified Loon,NA,174467,,bird
+LTJA,Long-tailed Jaeger,NA,176794,Stercoarius longicaudus,bird
+MAMU,Marbled Murrelet,NA,176996,Brachyramphus marmoratus,bird
+MEGU,Mew Gull,NA,176832,Larus canus,bird
+NOFU,Northern Fulmar,NA,174536,Fulmarus glacialis,bird
+NPSS,Unidentified non-marine,NA,NA,,bird
+NSNS,No Survey,NA,NA,,bird
+PAAU,Parakeet Auklet,NA,554029,Aethia psittacula,bird
+PAJA,Parasitic Jaeger,NA,17693,Stercorarius parasiticus,bird
+PALO,Pacific Loon,NA,174475,Gavia pacifica,bird
+PASS,Passerine,NA,NA,,bird
+PECO,Pelagic Cormorant,NA,174725,Phalacrocorax pelagicus,bird
+PFSH,Pink-footed Shearwater,NA,174547,Puffinus creatopus,bird
+PHAL,Unidentified Phalarope,NA,176733,Phalaropus,bird
+PIGR,Pied-billed Grebe,NA,174505,Podilymbus podiceps,bird
+PIGU,Pigeon Guillemot,NA,176991,Cepphus columba,bird
+POJA,Pomarine Jaeger,NA,176792,Stercorarius pomarinus,bird
+PROC,Unidentified Procellarid,NA,174532,Procellariidae,bird
+RAPT,Unidentified Raptor,NA,NA,,bird
+RBGU,Ring-billed Gull,NA,176830,Larus delawarensis,bird
+REPH,Red Phalarope,NA,176734,Phalaropus fulicarius,bird
+RHAU,Rhinocerous Auklet,NA,177023,Cerorhinca monocerata,bird
+RNGR,Red-necked Grebe,NA,174479,Podiceps grisegena,bird
+RNPH,Red-necked Phalarope,NA,176735,Phalaropus lobatus,bird
+RTLO,Red-throated Loon,NA,174474,Gavia stellata,bird
+SAGU,Sabine's Gull,NA,176803,Larus Linnaeus,bird
+SCOT,Unidentified Scoter,NA,175162,Melanitta,bird
+SHOR,Unidentified Shorebird,NA,NA,,bird
+SHOS,Short-tailed Shearwater,NA,174554,Puffinus tenuirostris,bird
+SHSP,Unidentified Shearwater,NA,174543,Puffinus,bird
+SOSH,Sooty Shearwater,NA,174553,Puffinus griseus,bird
+SPSP,Unidentified Storm-petrel,NA,174624,Oceanodroma,bird
+SUSC,Surf Scoter,NA,175170,Melanitta perspicillata,bird
+TERN,Unidentified Tern,NA,176885,Sterna,bird
+THGU,Thayer's Gull,NA,176828,Larus thayeri,bird
+TUPU,Tufted Puffin,NA,177032,Fratercula cirrhata,bird
+UNID,Unidentified Bird,NA,NA,,bird
+UNJA,Unidentified Jaeger,NA,176791,Stercorarius,bird
+WEGR,Western Grebe,NA,174503,Aechmophorus occidentalis,bird
+WEGU,Western Gull,NA,176817,Larus occidentalis,bird
+WIPE,White Pelican,NA,174684,Pelecanus erythrorhynchos,bird
+WWSC,White-winged Scoter,NA,175163,Melanitta fusca,bird
+YBLO,Yellow-billed Loon,NA,174470,Gavia adamsii,bird
+ARTO,Guadalupe Fur Seal,NA,180636,Arctocephalus townsendi,mammal
+CAUR,Northern Fur Seal,NA,180627,Callorhinus ursinus,mammal
+DECA,Long-beacked Common Dolphin,NA,771148,Delphinus capensis capensis,mammal
+DEDE,Risso's Dolphin,NA,180457,Grampus griseus,mammal
+DOLH,Unidentified Dolphin,NA,180415,Delphinidae,mammal
+ENLU,Sea Otter,NA,202390,Enhydra lutris nereis,mammal
+ESRO,Gray Whale,NA,180521,Eschrichtius robustus,mammal
+EUJU,Steller's Sea Lion,NA,180625,Eumetopias jubatus,mammal
+LAOB,Northern Right Whale Dolphin,NA,180454,Lissodelphis borealis,mammal
+LIBO,Short-beacked Common Dolphin,NA,180438,Delphinus delphis,mammal
+MIAN,Northern Elephant Seal,NA,180672,Mirounga angustirostris,mammal
+ODON,Unidentified Toothed Whale,NA,180404,Odontoceti,mammal
+OTAR,Unidentified Otariid,NA,180615,Otariidae,mammal
+PHDA,Dall's Porpoise,NA,612623,Phocoenoides dalli dalli,mammal
+PHOC,Unidentified Phocid,NA,180640,Phocidae,mammal
+PHPH,Harbor Porpoise,NA,180473,Phocoena phocoena,mammal
+PHVI,Harbor Seal,NA,180649,Phoca vitulina,mammal
+PINN,Unidentified Pinniped,NA,552303,Caniformia,mammal
+PORP,Unidentified Porpoise,NA,552307,Phocoenidae,mammal
+TUTR,Bottlenose Dolphin,NA,612621,Tursiops truncatus truncatus,mammal
+UNDE,Unidentified Common Dolphin,NA,180437,Delphinus,mammal
+UNMM,Unidentified Marine Mammal,NA,NA,,mammal
+WHAL,Unidentified Whale,NA,180403,Cetacea,mammal
+ZACA,California Sea Lion,NA,180621,Zalophus californianus,mammal
+ZICA,Cuviers Beaked Whale,NA,180498,Ziphius cavirostris,mammal

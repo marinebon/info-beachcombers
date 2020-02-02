@@ -1,0 +1,171 @@
+---
+title: "BeachCOMBERS for NMS infographics"
+output: 
+  html_document: 
+    toc: yes
+    toc_float: true
+    code_folding: hide
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, message = F, warning = F)
+```
+
+## ERDDAP
+
+* `EB_MM_BC`: [ERDDAP - BeachCOMBERS Effort-Based Marine Mammal and Seabird Beach Cast Survey - Data Access Form](https://oceanview.pfeg.noaa.gov/erddap/tabledap/EB_MM_BC.html)
+* `cciea_B_B_MORT`: [ERDDAP - Seabird beached mortality - Data Access Form](https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_B_MORT.html): subset of `EB_MM_BC`?
+
+```{r}
+# libraries
+library(here)
+library(glue)
+library(stringr)
+library(readr)
+library(dplyr)
+library(purrr)
+library(DT)
+library(rerddap)
+library(sf)
+library(mapview)
+library(leaflet)
+
+# paths & variables
+erddap_url <- "https://oceanview.pfeg.noaa.gov/erddap/"
+d_id       <- "EB_MM_BC"
+dir_data   <- here("data")
+d_csv      <- glue("{dir_data}/{d_id}.csv")
+segs_geo   <- glue("{dir_data}/{d_id}_segments.geojson")
+d_spp_csv  <- glue("{dir_data}/{d_id}_species.csv")
+
+Sys.setenv(RERDDAP_DEFAULT_URL = erddap_url)
+d_info <- info(d_id)
+
+if (!file.exists(d_csv)){
+  d <- tabledap(d_info)
+  write_csv(d, d_csv)
+}
+d <- read_csv(d_csv, guess_max = 10000)
+```
+
+Of the `r format(nrow(d), big.mark=",") ` rows in this `EB_MM_BC` dataset, let's look at the first 1,000 records:
+
+```{r}
+d %>% 
+  slice(1:100) %>% 
+  datatable()
+```
+
+## spatial
+
+### intersect sanctuary with segments
+
+```{r}
+xy2ln <- function(x1, y1, x2, y2){
+  if (any(is.na(c(x1, y1, x2, y2)))) return(NA)
+  
+  st_linestring(c(
+    st_point(c(x1, y1)), 
+    st_point(c(x2, y2))))
+}
+
+if (!file.exists(segs_geo)){
+  
+  segs <- d %>% 
+    group_by(
+      beach_segment_code, 
+      longitude, latitude, 
+      north_longitude, north_latitude,
+      south_longitude, south_latitude) %>% 
+    summarize(
+      n_rows = n()) %>% 
+    ungroup() %>% 
+    mutate(
+      geom = pmap(list(
+        north_longitude, north_latitude,
+        south_longitude, south_latitude), xy2ln) %>% 
+        st_sfc(crs = 4326)) %>% 
+    st_set_geometry(.$geom)
+  
+  write_sf(segs, segs_geo, delete_dsn = T)
+}
+segs <- read_sf(segs_geo)
+
+# TODO: move used fxns into library and utility.R
+source("~/github/cinms/scripts/rocky.R")
+
+nms     <- "mbnms"
+nms_ply <- get_nms_ply(nms)
+
+# mapview(segs, color="red") + 
+#   mapview(nms_ply, alpha.regions = 0.3)
+
+nms_segs <- segs %>% 
+  filter(
+    st_intersects(
+      segs, nms_ply, sparse = F))
+
+m1 <- mapview(nms_ply) + 
+  mapview(segs, color="red") + 
+  mapview(nms_segs, color="green")
+m1
+```
+
+NOTE the red segments near San Jose that did not get intersected by the polygon because of spatial coarseness and mismatch.
+
+### intersect buffered sanctuary with segments
+
+Buffer sanctuary by `0.005` decimal degress (~ `r 111 * 0.005` km at equator).
+
+```{r}
+nms_ply_buf <- st_buffer(nms_ply, dist = 0.005)
+
+nms_buf_segs <- segs %>% 
+  filter(
+    st_intersects(
+      segs, nms_ply_buf, sparse = F))
+
+m2 <- mapview(nms_ply_buf) +
+  mapview(nms_buf_segs, color="green")
+
+sync(m1, m2)
+```
+
+## taxa
+
+```{r}
+if (!file.exists(d_spp_csv)){
+  
+  flds_spp <- d_info$variables$variable_name %>% 
+    str_subset("species") %>% 
+    c("bird_or_mammal")
+  
+  d_spp <- tabledap(d_info, fields = flds_spp, distinct = T) %>% 
+    arrange(bird_or_mammal, species_code)
+  
+  write_csv(d_spp, d_spp_csv)
+}
+d_spp <- read_csv(d_spp_csv)
+
+table(d_spp$bird_or_mammal)
+```
+
+### birds
+
+```{r}
+d_spp %>% 
+  filter(bird_or_mammal == "bird") %>% 
+  datatable()
+```
+
+### mammals
+
+```{r}
+d_spp %>% 
+  filter(bird_or_mammal == "mammal") %>% 
+  datatable()
+```
+
+
