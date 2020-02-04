@@ -30,7 +30,12 @@ library(DT)
 library(rerddap)
 library(sf)
 library(mapview)
+library(leafsync)
 library(leaflet)
+library(skimr)
+library(lubridate)
+library(plotly)
+here <- here::here
 
 # paths & variables
 erddap_url <- "https://oceanview.pfeg.noaa.gov/erddap/"
@@ -41,10 +46,10 @@ segs_geo   <- glue("{dir_data}/{d_id}_segments.geojson")
 d_spp_csv  <- glue("{dir_data}/{d_id}_species.csv")
 
 Sys.setenv(RERDDAP_DEFAULT_URL = erddap_url)
-d_info <- info(d_id)
 
 if (!file.exists(d_csv)){
-  d <- tabledap(d_info)
+  d_info <- info(d_id)
+  d      <- tabledap(d_info)
   write_csv(d, d_csv)
 }
 d <- read_csv(d_csv, guess_max = 10000)
@@ -57,6 +62,20 @@ d %>%
   slice(1:100) %>% 
   datatable()
 ```
+
+```{r}
+skimr::skim(d)
+```
+
+
+- `percent_of_beach_surveyed`: all NaN
+- `cause_of_death`:
+  >    0     1     2     3     4     5     6     7 
+  >  818     6   302    21 64182   189     3     8
+- 
+
+
+TODO: skim()
 
 ## spatial
 
@@ -99,9 +118,6 @@ source("~/github/cinms/scripts/rocky.R")
 nms     <- "mbnms"
 nms_ply <- get_nms_ply(nms)
 
-# mapview(segs, color="red") + 
-#   mapview(nms_ply, alpha.regions = 0.3)
-
 nms_segs <- segs %>% 
   filter(
     st_intersects(
@@ -127,11 +143,18 @@ nms_buf_segs <- segs %>%
     st_intersects(
       segs, nms_ply_buf, sparse = F))
 
+d_nms_buf <- d %>% 
+  semi_join(
+    nms_buf_segs, by = "beach_segment_code")
+
 m2 <- mapview(nms_ply_buf) +
   mapview(nms_buf_segs, color="green")
 
+leafsync::sync
 sync(m1, m2)
 ```
+
+Filter by `beach_segment_code` in MBNMS: `r format(nrow(d_nms_buf), big.mark=",")` of `r format(nrow(d), big.mark=",")` rows (`r round(nrow(d_nms_buf)/nrow(d) * 100, 1) `%).
 
 ## taxa
 
@@ -166,6 +189,98 @@ d_spp %>%
 d_spp %>% 
   filter(bird_or_mammal == "mammal") %>% 
   datatable()
+```
+
+
+## plots
+
+### bird carcasses
+
+#### static
+
+```{r}
+g_birds <- d_nms_buf %>% 
+  filter(
+    bird_or_mammal == "bird",
+    carcass_present == T) %>% 
+  mutate(
+    year = year(time)) %>% 
+  group_by(year) %>% 
+  summarize(
+    n = n()) %>% 
+  ungroup() %>% 
+  ggplot(aes(x=year, y=n)) + 
+  geom_bar(stat = "identity") #+ 
+  #title("Bird carcasses over time")
+print(g_birds)
+```
+
+#### interactive, color by species on hover
+
+
+```{r}
+#plot.new()
+g_bird_spp <- d_nms_buf %>% 
+  filter(
+    bird_or_mammal == "bird",
+    carcass_present == T) %>% 
+  mutate(
+    year = year(time)) %>% 
+  group_by(year, species_code) %>% 
+  summarize(n = n()) %>% 
+  ungroup() %>% 
+  ggplot(aes(x=year, y=n, fill=species_code)) + 
+  geom_bar(stat = "identity") + 
+  #title("Bird carcasses over time, by species") + 
+  theme(legend.position = "none")
+
+ggplotly(g_bird_spp)
+```
+
+
+
+
+### mammal carcasses
+
+#### static
+
+```{r}
+g_mammal <- d_nms_buf %>% 
+  filter(
+    bird_or_mammal == "mammal",
+    carcass_present == T) %>% 
+  mutate(
+    year = year(time)) %>% 
+  group_by(year) %>% 
+  summarize(
+    n = n()) %>% 
+  ungroup() %>% 
+  ggplot(aes(x=year, y=n)) + 
+  geom_bar(stat = "identity") #+ 
+  #title("Bird carcasses over time")
+print(g_mammal)
+```
+
+#### interactive, color by species on hover
+
+
+```{r}
+#plot.new()
+g_mammal_spp <- d_nms_buf %>% 
+  filter(
+    bird_or_mammal == "mammal",
+    carcass_present == T) %>% 
+  mutate(
+    year = year(time)) %>% 
+  group_by(year, species_code) %>% 
+  summarize(n = n()) %>% 
+  ungroup() %>% 
+  ggplot(aes(x=year, y=n, fill=species_code)) + 
+  geom_bar(stat = "identity") + 
+  #title("Bird carcasses over time, by species") + 
+  theme(legend.position = "none")
+
+ggplotly(g_mammal_spp)
 ```
 
 
