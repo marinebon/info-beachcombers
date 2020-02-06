@@ -13,10 +13,15 @@ editor_options:
 knitr::opts_chunk$set(echo = T, message = F, warning = F)
 ```
 
-## ERDDAP
+## Data
 
-* `EB_MM_BC`: [ERDDAP - BeachCOMBERS Effort-Based Marine Mammal and Seabird Beach Cast Survey - Data Access Form](https://oceanview.pfeg.noaa.gov/erddap/tabledap/EB_MM_BC.html)
-* `cciea_B_B_MORT`: [ERDDAP - Seabird beached mortality - Data Access Form](https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_B_MORT.html): subset of `EB_MM_BC`?
+
+* `bm16`: [b]irds + [m]ammals, up to 20[16]
+  - [ERDDAP - BeachCOMBERS Effort-Based Marine Mammal and Seabird Beach Cast Survey - Data Access Form](https://oceanview.pfeg.noaa.gov/erddap/tabledap/EB_MM_BC.html) `EB_MM_BC`, birds **+ mammals**, but only up to **2016**
+* `b019`: [b]irds [o]nly, up to 20[19]
+  - [ERDDAP - Seabird beached mortality - Data Access Form](https://oceanview.pfeg.noaa.gov/erddap/tabledap/cciea_B_B_MORT.html) `cciea_B_B_MORT`
+  - [researchworkspace.com/.../BeachCOMBERS_formatted_2019.csv](https://researchworkspace.com/file/5851070/BeachCOMBERS_formatted_2019.csv), **birds only**, up to **2019**
+  - TODO: check ERDDAP same as researchworkspace.com
 
 ```{r}
 # libraries
@@ -41,21 +46,75 @@ here <- here::here
 erddap_url <- "https://oceanview.pfeg.noaa.gov/erddap/"
 d_id       <- "EB_MM_BC"
 dir_data   <- here("data")
+# manual download from Axiom space:
+axiom_url  <- "https://researchworkspace.com/file/5851070/BeachCOMBERS_formatted_2019.csv"
+# TODO: compsare BeachCOMBERS_formatted_2019.csv w/ ERDDAP cciea_B_B_MORT
+d_bo19_csv <- glue("{dir_data}/{d_id}_bo19.csv")
+d_bm16_csv <- glue("{dir_data}/{d_id}_bm16.csv")
 d_csv      <- glue("{dir_data}/{d_id}.csv")
 segs_geo   <- glue("{dir_data}/{d_id}_segments.geojson")
 d_spp_csv  <- glue("{dir_data}/{d_id}_species.csv")
+cols_bo19_csv       <- glue("{dir_data}/cols_bo19.csv")
+cols_bm16tobo19_csv <- glue("{dir_data}/cols_bm16tobo19.csv")
 
 Sys.setenv(RERDDAP_DEFAULT_URL = erddap_url)
 
-if (!file.exists(d_csv)){
+if (!file.exists(d_bo19_csv)){
+  download.file(axiom_url, d_bo19_csv)
+}
+
+if (!file.exists(d_bm16_csv)){
   d_info <- info(d_id)
   d      <- tabledap(d_info)
-  write_csv(d, d_csv)
+  write_csv(d, d_bm16_csv)
 }
-d <- read_csv(d_csv, guess_max = 10000)
+
+d_bo19 <- read_csv(d_bo19_csv, guess_max = 100000)
+d_bm16 <- read_csv(d_bm16_csv, guess_max = 10000)
+
+if (!file.exists(cols_bm16tobo19_csv)){
+  tibble(
+    bo19_name = names(d_bo19),
+    bo19_type = map_chr(d_bo19, ~ class(.) %>% paste(collapse = ","))) %>%
+    arrange(bo19_name) %>%
+    write_csv(cols_bo19_csv)
+  tibble(
+    bm16_name = names(d_bm16),
+    bm16_type = map_chr(d_bm16, ~ class(.) %>% paste(collapse = ","))) %>%
+    arrange(bm16_name) %>%
+    write_csv(cols_bm16tobo19_csv)
+  stop("NEXT: manually match column name and type for bm16 ({basename(d_bm16tobo19_csv)}) to match bo19 ({basename(d_bo19_csv)}).")
+}
+cx      <- read_csv(cols_bm16tobo19_csv)
+cx_vars <- setNames(cx$bm16_name, cx$bo19_name)
+
+# TODO: update bm16 rows
+# table(d_bo19 %>% select(age_class_label, age_class))
+# table(d_bo19 %>% select(condition_label, condition))
+# table(d_bo19 %>% select(sex_label, sex))
+# other bo19 flds missing in bo19: 
+# - organization_code
+# - organization_label
+# - deposition_rate_carcass_per_km
+# - inst_code
+
+# setdiff(unique(d_bm16$age_class), unique(d_bo19$age_class))
+# unique(d_bo19$age_class_label)
+
+d_bm164bo19 <- d_bm16 %>% 
+    filter(bird_or_mammal != "bird") %>% 
+    mutate(
+      unique_carcass_identifier = as.character(unique_carcass_identifier)) %>% 
+    rename(!!cx_vars)
+d <- bind_rows(
+  d_bo19,
+  d_bm164bo19) %>% 
+  mutate(
+    species = glue(
+      "{species_code}: {species_common_name} ({species_sci_name}; ITIS: {species_itis})"))
 ```
 
-Of the `r format(nrow(d), big.mark=",") ` rows in this `EB_MM_BC` dataset, let's look at the first 1,000 records:
+Of the `r format(nrow(d), big.mark=",") ` rows in this dataset, let's look at the first 1,000 records:
 
 ```{r}
 d %>% 
@@ -67,15 +126,48 @@ d %>%
 skimr::skim(d)
 ```
 
-
 - `percent_of_beach_surveyed`: all NaN
 - `cause_of_death`:
   >    0     1     2     3     4     5     6     7 
   >  818     6   302    21 64182   189     3     8
-- 
 
+## taxa
 
-TODO: skim()
+```{r}
+if (!file.exists(d_spp_csv)){
+  
+  flds_spp <- names(d) %>% 
+    str_subset("species") %>% 
+    c("bird_or_mammal")
+  
+  d_spp <- d %>% 
+    select(!!!flds_spp) %>% 
+    group_by_all() %>% 
+    summarise(n = n()) %>% 
+    arrange(bird_or_mammal, species)
+  
+  write_csv(d_spp, d_spp_csv)
+}
+d_spp <- read_csv(d_spp_csv)
+
+table(d_spp$bird_or_mammal)
+```
+
+### birds
+
+```{r}
+d_spp %>% 
+  filter(bird_or_mammal == "bird") %>% 
+  datatable()
+```
+
+### mammals
+
+```{r}
+d_spp %>% 
+  filter(bird_or_mammal == "mammal") %>% 
+  datatable()
+```
 
 ## spatial
 
@@ -93,9 +185,12 @@ xy2ln <- function(x1, y1, x2, y2){
 if (!file.exists(segs_geo)){
   
   segs <- d %>% 
+    filter(
+      !is.na(north_longitude), !is.na(north_latitude),
+      !is.na(south_longitude), !is.na(south_latitude)) %>% 
     group_by(
       beach_segment_code, 
-      longitude, latitude, 
+      #longitude, latitude, 
       north_longitude, north_latitude,
       south_longitude, south_latitude) %>% 
     summarize(
@@ -156,42 +251,6 @@ sync(m1, m2)
 
 Filter by `beach_segment_code` in MBNMS: `r format(nrow(d_nms_buf), big.mark=",")` of `r format(nrow(d), big.mark=",")` rows (`r round(nrow(d_nms_buf)/nrow(d) * 100, 1) `%).
 
-## taxa
-
-```{r}
-if (!file.exists(d_spp_csv)){
-  
-  flds_spp <- d_info$variables$variable_name %>% 
-    str_subset("species") %>% 
-    c("bird_or_mammal")
-  
-  d_spp <- tabledap(d_info, fields = flds_spp, distinct = T) %>% 
-    arrange(bird_or_mammal, species_code)
-  
-  write_csv(d_spp, d_spp_csv)
-}
-d_spp <- read_csv(d_spp_csv)
-
-table(d_spp$bird_or_mammal)
-```
-
-### birds
-
-```{r}
-d_spp %>% 
-  filter(bird_or_mammal == "bird") %>% 
-  datatable()
-```
-
-### mammals
-
-```{r}
-d_spp %>% 
-  filter(bird_or_mammal == "mammal") %>% 
-  datatable()
-```
-
-
 ## plots
 
 ### bird carcasses
@@ -210,7 +269,8 @@ g_birds <- d_nms_buf %>%
     n = n()) %>% 
   ungroup() %>% 
   ggplot(aes(x=year, y=n)) + 
-  geom_bar(stat = "identity") #+ 
+  #geom_bar(stat = "identity") #+ 
+  geom_col() #+ 
   #title("Bird carcasses over time")
 print(g_birds)
 ```
@@ -226,11 +286,12 @@ g_bird_spp <- d_nms_buf %>%
     carcass_present == T) %>% 
   mutate(
     year = year(time)) %>% 
-  group_by(year, species_code) %>% 
+  group_by(year, species) %>% 
   summarize(n = n()) %>% 
   ungroup() %>% 
-  ggplot(aes(x=year, y=n, fill=species_code)) + 
-  geom_bar(stat = "identity") + 
+  ggplot(aes(x=year, y=n, fill=species)) + 
+  #geom_bar(stat = "identity") + 
+  geom_col() +
   #title("Bird carcasses over time, by species") + 
   theme(legend.position = "none")
 
@@ -256,7 +317,8 @@ g_mammal <- d_nms_buf %>%
     n = n()) %>% 
   ungroup() %>% 
   ggplot(aes(x=year, y=n)) + 
-  geom_bar(stat = "identity") #+ 
+  #geom_bar(stat = "identity") #+ 
+  geom_col() #+ 
   #title("Bird carcasses over time")
 print(g_mammal)
 ```
@@ -272,11 +334,12 @@ g_mammal_spp <- d_nms_buf %>%
     carcass_present == T) %>% 
   mutate(
     year = year(time)) %>% 
-  group_by(year, species_code) %>% 
+  group_by(year, species) %>% 
   summarize(n = n()) %>% 
   ungroup() %>% 
-  ggplot(aes(x=year, y=n, fill=species_code)) + 
-  geom_bar(stat = "identity") + 
+  ggplot(aes(x=year, y=n, fill=species)) + 
+  #geom_bar(stat = "identity") + 
+  geom_col() +
   #title("Bird carcasses over time, by species") + 
   theme(legend.position = "none")
 

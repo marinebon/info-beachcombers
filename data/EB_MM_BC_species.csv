@@ -1,119 +1,251 @@
-species_code,species_common_name,species_genus,species_itis,species_sci_name,bird_or_mammal
-FISH,Fish or Shark,NA,NA,,
-LBTR,Leatherback Turtle,NA,173843,Dermochelys coriacea,
-MOLA,,NA,NA,,
-NMMA,Unidentified Not Marine Mammal,NA,NA,,
-NNNN,No Birds or Mammals on survey,NA,NA,,
-ALCD,Unidentified Alcid,NA,176967,,bird
-AMCO,American Coot,NA,176292,Fulica americana,bird
-ANMU,Ancient Murrelet,NA,177008,Synthliboramphus antiquus,bird
-ARLO,Arctic Loon,NA,174471,Gavia arctica,bird
-ASSP,Ashy Storm-petrel,NA,174634,Oceanodroma homochroa,bird
-BFAL,Black-footed Albatross,NA,174516,Diomedea nigripes,bird
-BIRD,,NA,NA,,bird
-BLKI,Black-legged Kittiwake,NA,176875,Rissa tridactyla,bird
-BLSC,Black Scoter,NA,175171,Melanitta nigra,bird
-BOGU,Bonaparte's Gull,NA,176839,Larus philadelphia,bird
-BRAC,Brandt's Cormorant,NA,174724,Phalacrocorax penicillatus,bird
-BRPE,Brown Pelican,NA,174685,Pelecanus occidentalis,bird
-BUSH,Buller's Shearwater,NA,174552,Puffinus bulleri,bird
-BVSH,Black-vented Shearwater,NA,554396,Puffinus opisthomelas,bird
-CAAU,Cassin's Auklet,NA,177013,Ptychoramphus aleuticus,bird
-CAGO,Canada Goose,NA,174999,Branta canadensis,bird
-CAGU,California Gull,NA,176829,Larus californicus,bird
-CATE,Caspian Tern,NA,176924,Sterna caspia,bird
-CHGU,California/Herring Gull,NA,824077,Larus smithsonianus,bird
-CLGR,Clark's Grebe,NA,554027,Aechmophorus clarkii,bird
-COLO,Comon Loon,NA,174469,Gavia immer,bird
-COMU,Common Murre,NA,176974,Uria aalgae,bird
-CORM,Unidentified Cormorant,NA,174714,,bird
-COTE,Common Tern,NA,176888,Sterna hirundo,bird
-CRMU,Craveri's Murrelet,NA,177010,Synthliboramphus craveri,bird
-CWGR,Clark's/Western Grebe,NA,174477,,bird
-CWGU,California/Western Gull,NA,176802,,bird
-DCCO,Double-crested Cormorant,NA,17417,Phalacrocorax auritus,bird
-DOVE,Unidentified dove/pigeon,NA,NA,,bird
-DUCK,Unidentified duck/goose,NA,NA,,bird
-EAGR,Eared Grebe,NA,174485,Podiceps nigricollis,bird
-ELTE,Elegant Tern,NA,176925,Sterna elegans,bird
-FFSH,Flesh-footed Shearwater,NA,174548,Puffinus carneipes,bird
-FOTE,Forster's Tern,NA,176887,Sterna forsteri,bird
-FTSP,Fork-tailed Storm-petrel,NA,174625,Oceanodroma furcata,bird
-GLGU,Glaucous Gull,NA,176808,Larus hyperboreus,bird
-GREB,Unidentified Grebe,NA,174477,,bird
-GULL,Unidentified Gull,NA,716802,,bird
-GWGU,Glaucous-winged Gull,NA,176814,Larus glaucescens,bird
-HEEG,Heermann's Gull,NA,176841,Larus heermanni,bird
-HERG,Herring Gull,NA,176824,Larus argentatus,bird
-HOGR,Horned Grebe,NA,174482,Podiceps auritus,bird
-HOPU,Horned Puffin,NA,177029,Fratercula corniculata,bird
-LAAL,Laysan Albatross,NA,554378,Phoebastria immutabilis,bird
-LHSP,Leach's Storm-petrel,NA,174628,Oceanodroma leucorhoa,bird
-LOON,Unidentified Loon,NA,174467,,bird
-LTJA,Long-tailed Jaeger,NA,176794,Stercoarius longicaudus,bird
-MAMU,Marbled Murrelet,NA,176996,Brachyramphus marmoratus,bird
-MEGU,Mew Gull,NA,176832,Larus canus,bird
-NOFU,Northern Fulmar,NA,174536,Fulmarus glacialis,bird
-NPSS,Unidentified non-marine,NA,NA,,bird
-NSNS,No Survey,NA,NA,,bird
-PAAU,Parakeet Auklet,NA,554029,Aethia psittacula,bird
-PAJA,Parasitic Jaeger,NA,17693,Stercorarius parasiticus,bird
-PALO,Pacific Loon,NA,174475,Gavia pacifica,bird
-PASS,Passerine,NA,NA,,bird
-PECO,Pelagic Cormorant,NA,174725,Phalacrocorax pelagicus,bird
-PFSH,Pink-footed Shearwater,NA,174547,Puffinus creatopus,bird
-PHAL,Unidentified Phalarope,NA,176733,Phalaropus,bird
-PIGR,Pied-billed Grebe,NA,174505,Podilymbus podiceps,bird
-PIGU,Pigeon Guillemot,NA,176991,Cepphus columba,bird
-POJA,Pomarine Jaeger,NA,176792,Stercorarius pomarinus,bird
-PROC,Unidentified Procellarid,NA,174532,Procellariidae,bird
-RAPT,Unidentified Raptor,NA,NA,,bird
-RBGU,Ring-billed Gull,NA,176830,Larus delawarensis,bird
-REPH,Red Phalarope,NA,176734,Phalaropus fulicarius,bird
-RHAU,Rhinocerous Auklet,NA,177023,Cerorhinca monocerata,bird
-RNGR,Red-necked Grebe,NA,174479,Podiceps grisegena,bird
-RNPH,Red-necked Phalarope,NA,176735,Phalaropus lobatus,bird
-RTLO,Red-throated Loon,NA,174474,Gavia stellata,bird
-SAGU,Sabine's Gull,NA,176803,Larus Linnaeus,bird
-SCOT,Unidentified Scoter,NA,175162,Melanitta,bird
-SHOR,Unidentified Shorebird,NA,NA,,bird
-SHOS,Short-tailed Shearwater,NA,174554,Puffinus tenuirostris,bird
-SHSP,Unidentified Shearwater,NA,174543,Puffinus,bird
-SOSH,Sooty Shearwater,NA,174553,Puffinus griseus,bird
-SPSP,Unidentified Storm-petrel,NA,174624,Oceanodroma,bird
-SUSC,Surf Scoter,NA,175170,Melanitta perspicillata,bird
-TERN,Unidentified Tern,NA,176885,Sterna,bird
-THGU,Thayer's Gull,NA,176828,Larus thayeri,bird
-TUPU,Tufted Puffin,NA,177032,Fratercula cirrhata,bird
-UNID,Unidentified Bird,NA,NA,,bird
-UNJA,Unidentified Jaeger,NA,176791,Stercorarius,bird
-WEGR,Western Grebe,NA,174503,Aechmophorus occidentalis,bird
-WEGU,Western Gull,NA,176817,Larus occidentalis,bird
-WIPE,White Pelican,NA,174684,Pelecanus erythrorhynchos,bird
-WWSC,White-winged Scoter,NA,175163,Melanitta fusca,bird
-YBLO,Yellow-billed Loon,NA,174470,Gavia adamsii,bird
-ARTO,Guadalupe Fur Seal,NA,180636,Arctocephalus townsendi,mammal
-CAUR,Northern Fur Seal,NA,180627,Callorhinus ursinus,mammal
-DECA,Long-beacked Common Dolphin,NA,771148,Delphinus capensis capensis,mammal
-DEDE,Risso's Dolphin,NA,180457,Grampus griseus,mammal
-DOLH,Unidentified Dolphin,NA,180415,Delphinidae,mammal
-ENLU,Sea Otter,NA,202390,Enhydra lutris nereis,mammal
-ESRO,Gray Whale,NA,180521,Eschrichtius robustus,mammal
-EUJU,Steller's Sea Lion,NA,180625,Eumetopias jubatus,mammal
-LAOB,Northern Right Whale Dolphin,NA,180454,Lissodelphis borealis,mammal
-LIBO,Short-beacked Common Dolphin,NA,180438,Delphinus delphis,mammal
-MIAN,Northern Elephant Seal,NA,180672,Mirounga angustirostris,mammal
-ODON,Unidentified Toothed Whale,NA,180404,Odontoceti,mammal
-OTAR,Unidentified Otariid,NA,180615,Otariidae,mammal
-PHDA,Dall's Porpoise,NA,612623,Phocoenoides dalli dalli,mammal
-PHOC,Unidentified Phocid,NA,180640,Phocidae,mammal
-PHPH,Harbor Porpoise,NA,180473,Phocoena phocoena,mammal
-PHVI,Harbor Seal,NA,180649,Phoca vitulina,mammal
-PINN,Unidentified Pinniped,NA,552303,Caniformia,mammal
-PORP,Unidentified Porpoise,NA,552307,Phocoenidae,mammal
-TUTR,Bottlenose Dolphin,NA,612621,Tursiops truncatus truncatus,mammal
-UNDE,Unidentified Common Dolphin,NA,180437,Delphinus,mammal
-UNMM,Unidentified Marine Mammal,NA,NA,,mammal
-WHAL,Unidentified Whale,NA,180403,Cetacea,mammal
-ZACA,California Sea Lion,NA,180621,Zalophus californianus,mammal
-ZICA,Cuviers Beaked Whale,NA,180498,Ziphius cavirostris,mammal
+species_sci_name,species_common_name,species_itis,species_code,species_genus,species,bird_or_mammal,n
+Corvus brachyrhyn./corax,American Crow/Common Raven,179724,ACCR,NA,ACCR: American Crow/Common Raven (Corvus brachyrhyn./corax; ITIS: 179724),bird,12
+Anas crecca,American Green-winged Teal,175081,AGWT,NA,AGWT: American Green-winged Teal (Anas crecca; ITIS: 175081),bird,27
+NA,Unidentified Alcid,176967,ALCD,NA,ALCD: Unidentified Alcid (NA; ITIS: 176967),bird,551
+"Alicdae (gen, sp)",Alcid (unidentified),176967,ALCI,NA,"ALCI: Alcid (unidentified) (Alicdae (gen, sp); ITIS: 176967)",bird,89
+Recurvirostra americana,American Avocet,176721,AMAV,NA,AMAV: American Avocet (Recurvirostra americana; ITIS: 176721),bird,1
+Fulica americana,American Coot,176292,AMCO,NA,AMCO: American Coot (Fulica americana; ITIS: 176292),bird,133
+Corvus brachyrhynchos,American Crow,179731,AMCR,NA,AMCR: American Crow (Corvus brachyrhynchos; ITIS: 179731),bird,27
+Turdus migratorius,American Robin,179759,AMRO,NA,AMRO: American Robin (Turdus migratorius; ITIS: 179759),bird,2
+Anas americana,American Wigeon,175094,AMWI,NA,AMWI: American Wigeon (Anas americana; ITIS: 175094),bird,10
+Synthliboramphus antiquus,Ancient Murrelet,177008,ANMU,NA,ANMU: Ancient Murrelet (Synthliboramphus antiquus; ITIS: 177008),bird,103
+Gavia arctica,Arctic Loon,174471,ARLO,NA,ARLO: Arctic Loon (Gavia arctica; ITIS: 174471),bird,1
+Sterna paradisaea,Arctic Tern,176890,ARTE,NA,ARTE: Arctic Tern (Sterna paradisaea; ITIS: 176890),bird,2
+Oceanodroma homochroa,Ashy Storm-petrel,174634,ASSP,NA,ASSP: Ashy Storm-petrel (Oceanodroma homochroa; ITIS: 174634),bird,9
+Oceanodroma homochroa,Ashy Storm-Petrel,174634,ASSP,NA,ASSP: Ashy Storm-Petrel (Oceanodroma homochroa; ITIS: 174634),bird,18
+Pelecanus erythrorhynchos,American White Pelican,174684,AWPE,NA,AWPE: American White Pelican (Pelecanus erythrorhynchos; ITIS: 174684),bird,3
+Tyto alba,Barn Owl,177851,BANO,NA,BANO: Barn Owl (Tyto alba; ITIS: 177851),bird,30
+Riparia riparia,Bank Swallow,178436,BANS,NA,BANS: Bank Swallow (Riparia riparia; ITIS: 178436),bird,1
+Pluvialis squatarola,Black-bellied Plover,176567,BBPL,NA,BBPL: Black-bellied Plover (Pluvialis squatarola; ITIS: 176567),bird,10
+Nycticorax nycticorax,Black-crowned Night-Heron,174832,BCNH,NA,BCNH: Black-crowned Night-Heron (Nycticorax nycticorax; ITIS: 174832),bird,13
+Diomedea nigripes,Black-footed Albatross,174516,BFAL,NA,BFAL: Black-footed Albatross (Diomedea nigripes; ITIS: 174516),bird,34
+Phoebastria nigripes,Black-footed Albatross,554379,BFAL,NA,BFAL: Black-footed Albatross (Phoebastria nigripes; ITIS: 554379),bird,13
+"Aves (gen, sp)",Bird (unidentified marine/non-marine),174371,BIRD,NA,"BIRD: Bird (unidentified marine/non-marine) (Aves (gen, sp); ITIS: 174371)",bird,279
+NA,Unknown,174371,BIRD,NA,BIRD: Unknown (NA; ITIS: 174371),bird,106
+Rissa tridactyla,Black-legged Kittiwake,176875,BLKI,NA,BLKI: Black-legged Kittiwake (Rissa tridactyla; ITIS: 176875),bird,151
+Haematopus bachmani,Black Oystercatcher,176475,BLOY,NA,BLOY: Black Oystercatcher (Haematopus bachmani; ITIS: 176475),bird,9
+Melanitta americana,Black Scoter,175171,BLSC,NA,BLSC: Black Scoter (Melanitta americana; ITIS: 175171),bird,12
+Melanitta nigra,Black Scoter,175171,BLSC,NA,BLSC: Black Scoter (Melanitta nigra; ITIS: 175171),bird,12
+Arenaria melanocephala,Black Turnstone,176574,BLTU,NA,BLTU: Black Turnstone (Arenaria melanocephala; ITIS: 176574),bird,7
+Chroicocephalus philadelphia,Bonaparte's Gull,824040,BOGU,NA,BOGU: Bonaparte's Gull (Chroicocephalus philadelphia; ITIS: 824040),bird,21
+Larus philadelphia,Bonaparte's Gull,176839,BOGU,NA,BOGU: Bonaparte's Gull (Larus philadelphia; ITIS: 176839),bird,14
+Phalacrocorax penicillatus,Brandt's Cormorant,174724,BRAC,NA,BRAC: Brandt's Cormorant (Phalacrocorax penicillatus; ITIS: 174724),bird,13707
+Branta bernicla,Brant,175011,BRAN,NA,BRAN: Brant (Branta bernicla; ITIS: 175011),bird,58
+Sula leucogaster,Brown Booby,174704,BRBO,NA,BRBO: Brown Booby (Sula leucogaster; ITIS: 174704),bird,3
+Pelecanus occidentalis,Brown Pelican,174685,BRPE,NA,BRPE: Brown Pelican (Pelecanus occidentalis; ITIS: 174685),bird,2937
+Limosa lapponica,Bar-tailed Godwit,176687,BTGO,NA,BTGO: Bar-tailed Godwit (Limosa lapponica; ITIS: 176687),bird,1
+Patagioenas fasciata,Band-tailed Pigeon,676899,BTPI,NA,BTPI: Band-tailed Pigeon (Patagioenas fasciata; ITIS: 676899),bird,3
+Bucephala albeola,Bufflehead,175145,BUFF,NA,BUFF: Bufflehead (Bucephala albeola; ITIS: 175145),bird,87
+Puffinus bulleri,Buller's Shearwater,174552,BULS,NA,BULS: Buller's Shearwater (Puffinus bulleri; ITIS: 174552),bird,19
+Puffinus bulleri,Buller's Shearwater,174552,BUSH,NA,BUSH: Buller's Shearwater (Puffinus bulleri; ITIS: 174552),bird,23
+Psaltriparus minimus,Bushtit,178764,BUSH,NA,BUSH: Bushtit (Psaltriparus minimus; ITIS: 178764),bird,1
+Puffinus opisthomelas,Black-vented Shearwater,554396,BVSH,NA,BVSH: Black-vented Shearwater (Puffinus opisthomelas; ITIS: 554396),bird,124
+Anas discors,Blue-winged Teal,175086,BWTE,NA,BWTE: Blue-winged Teal (Anas discors; ITIS: 175086),bird,1
+Ptychoramphus aleuticus,Cassin's Auklet,177013,CAAU,NA,CAAU: Cassin's Auklet (Ptychoramphus aleuticus; ITIS: 177013),bird,2585
+Branta hutchinsii,Cackling Goose,714068,CACG,NA,CACG: Cackling Goose (Branta hutchinsii; ITIS: 714068),bird,18
+Branta canadensis,Canada Goose,174999,CAGO,NA,CAGO: Canada Goose (Branta canadensis; ITIS: 174999),bird,8
+Larus californicus,California Gull,176829,CAGU,NA,CAGU: California Gull (Larus californicus; ITIS: 176829),bird,2061
+Branta canadensis,Canada Goose,174999,CANG,NA,CANG: Canada Goose (Branta canadensis; ITIS: 174999),bird,15
+Aythya valisineria,Canvasback,175129,CANV,NA,CANV: Canvasback (Aythya valisineria; ITIS: 175129),bird,2
+Callipepla californica,California Quail,175876,CAQU,NA,CAQU: California Quail (Callipepla californica; ITIS: 175876),bird,1
+Aphelocoma californica,California Scrub-Jay,554128,CASJ,NA,CASJ: California Scrub-Jay (Aphelocoma californica; ITIS: 554128),bird,1
+Hydroprogne caspia,Caspian Tern,176935,CATE,NA,CATE: Caspian Tern (Hydroprogne caspia; ITIS: 176935),bird,27
+Sterna caspia,Caspian Tern,176924,CATE,NA,CATE: Caspian Tern (Sterna caspia; ITIS: 176924),bird,21
+Larus smithsonianus,California/Herring Gull,824077,CHGU,NA,CHGU: California/Herring Gull (Larus smithsonianus; ITIS: 824077),bird,2
+Aechmophorus clarkii,Clark's Grebe,554027,CLGR,NA,CLGR: Clark's Grebe (Aechmophorus clarkii; ITIS: 554027),bird,872
+Nucifraga columbiana,Clark's Nutcracker,179750,CLNU,NA,CLNU: Clark's Nutcracker (Nucifraga columbiana; ITIS: 179750),bird,1
+Bucephala clangula,Common Goldeneye,175141,COGO,NA,COGO: Common Goldeneye (Bucephala clangula; ITIS: 175141),bird,6
+Accipiter cooperii,Cooper's Hawk,175309,COHA,NA,COHA: Cooper's Hawk (Accipiter cooperii; ITIS: 175309),bird,3
+Gavia immer,Common Loon,174469,COLO,NA,COLO: Common Loon (Gavia immer; ITIS: 174469),bird,195
+Gavia immer,Comon Loon,174469,COLO,NA,COLO: Comon Loon (Gavia immer; ITIS: 174469),bird,443
+Mergus merganser,Common Merganser,175185,COME,NA,COME: Common Merganser (Mergus merganser; ITIS: 175185),bird,1
+Uria aalgae,Common Murre,176974,COMU,NA,COMU: Common Murre (Uria aalgae; ITIS: 176974),bird,21709
+Uria aalge,Common Murre,176974,COMU,NA,COMU: Common Murre (Uria aalge; ITIS: 176974),bird,15698
+Corvus corax,Common Raven,179725,CORA,NA,CORA: Common Raven (Corvus corax; ITIS: 179725),bird,92
+Phalacrocorax (sp),Cormorant (unidentified),174713,CORM,NA,CORM: Cormorant (unidentified) (Phalacrocorax (sp); ITIS: 174713),bird,285
+NA,Unidentified Cormorant,174714,CORM,NA,CORM: Unidentified Cormorant (NA; ITIS: 174714),bird,1233
+Sterna hirundo,Common Tern,176888,COTE,NA,COTE: Common Tern (Sterna hirundo; ITIS: 176888),bird,7
+Synthliboramphus craveri,Craveri's Murrelet,177010,CRMU,NA,CRMU: Craveri's Murrelet (Synthliboramphus craveri; ITIS: 177010),bird,8
+NA,Clark's/Western Grebe,174477,CWGR,NA,CWGR: Clark's/Western Grebe (NA; ITIS: 174477),bird,3513
+NA,California/Western Gull,176802,CWGU,NA,CWGU: California/Western Gull (NA; ITIS: 176802),bird,3
+Phalacrocorax auritus,Double-crested Cormorant,17417,DCCO,NA,DCCO: Double-crested Cormorant (Phalacrocorax auritus; ITIS: 17417),bird,288
+Phalacrocorax auritus,Double-crested Cormorant,174717,DCCO,NA,DCCO: Double-crested Cormorant (Phalacrocorax auritus; ITIS: 174717),bird,180
+Anas (sp),Duck (domestic),174371,DODU,NA,DODU: Duck (domestic) (Anas (sp); ITIS: 174371),bird,1
+NA,Unidentified dove/pigeon,174371,DOVE,NA,DOVE: Unidentified dove/pigeon (NA; ITIS: 174371),bird,110
+Aves (sp),Duck (unidentified),174983,DUCK,NA,DUCK: Duck (unidentified) (Aves (sp); ITIS: 174983),bird,23
+NA,Unidentified duck/goose,174371,DUCK,NA,DUCK: Unidentified duck/goose (NA; ITIS: 174371),bird,67
+Calidris alpina,Dunlin,176661,DUNL,NA,DUNL: Dunlin (Calidris alpina; ITIS: 176661),bird,5
+Podiceps nigricollis,Eared Grebe,174485,EAGR,NA,EAGR: Eared Grebe (Podiceps nigricollis; ITIS: 174485),bird,377
+Streptopelia decaocto,Eurasian Collared-Dove,177139,ECDO,NA,ECDO: Eurasian Collared-Dove (Streptopelia decaocto; ITIS: 177139),bird,4
+Podiceps auritus/nigricol.,Eared/Horned Grebe,174478,EHGR,NA,EHGR: Eared/Horned Grebe (Podiceps auritus/nigricol.; ITIS: 174478),bird,66
+Sterna elegans,Elegant Tern,176925,ELTE,NA,ELTE: Elegant Tern (Sterna elegans; ITIS: 176925),bird,39
+Thalasseus elegans,Elegant Tern,176931,ELTE,NA,ELTE: Elegant Tern (Thalasseus elegans; ITIS: 176931),bird,37
+Puffinus carneipes,Flesh-footed Shearwater,174548,FFSH,NA,FFSH: Flesh-footed Shearwater (Puffinus carneipes; ITIS: 174548),bird,3
+Sterna forsteri,Forster's Tern,176887,FOTE,NA,FOTE: Forster's Tern (Sterna forsteri; ITIS: 176887),bird,13
+Oceanodroma furcata,Fork-tailed Storm-petrel,174625,FTSP,NA,FTSP: Fork-tailed Storm-petrel (Oceanodroma furcata; ITIS: 174625),bird,42
+Oceanodroma furcata,Fork-tailed Storm-Petrel,174625,FTSP,NA,FTSP: Fork-tailed Storm-Petrel (Oceanodroma furcata; ITIS: 174625),bird,30
+Anas strepera,Gadwall,175073,GADW,NA,GADW: Gadwall (Anas strepera; ITIS: 175073),bird,5
+Ardea herodias,Great Blue Heron,174773,GBHE,NA,GBHE: Great Blue Heron (Ardea herodias; ITIS: 174773),bird,5
+Zonotrichia atricapilla,Golden-crowned Sparrow,179461,GCSP,NA,GCSP: Golden-crowned Sparrow (Zonotrichia atricapilla; ITIS: 179461),bird,1
+Bubo virginianus,Great Horned Owl,177884,GHOW,NA,GHOW: Great Horned Owl (Bubo virginianus; ITIS: 177884),bird,5
+Larus hyperboreus,Glaucous Gull,176808,GLGU,NA,GLGU: Glaucous Gull (Larus hyperboreus; ITIS: 176808),bird,39
+Podicipedidae (gen sp),Grebe (unidentified),174477,GREB,NA,GREB: Grebe (unidentified) (Podicipedidae (gen sp); ITIS: 174477),bird,108
+NA,Unidentified Grebe,174477,GREB,NA,GREB: Unidentified Grebe (NA; ITIS: 174477),bird,1084
+Ardea alba,Great Egret,554135,GREG,NA,GREG: Great Egret (Ardea alba; ITIS: 554135),bird,6
+Butorides virescens,Green Heron,174793,GRHE,NA,GRHE: Green Heron (Butorides virescens; ITIS: 174793),bird,1
+Aythya marila,Greater Scaup,175130,GRSC,NA,GRSC: Greater Scaup (Aythya marila; ITIS: 175130),bird,40
+Tringa melanoleuca,Greater Yellowlegs,176619,GRYE,NA,GRYE: Greater Yellowlegs (Tringa melanoleuca; ITIS: 176619),bird,1
+Larus (sp),Gull (unidentified),176803,GULL,NA,GULL: Gull (unidentified) (Larus (sp); ITIS: 176803),bird,529
+NA,Unidentified Gull,716802,GULL,NA,GULL: Unidentified Gull (NA; ITIS: 716802),bird,3694
+Anser albifrons,Greater White-fronted Goose,175020,GWFG,NA,GWFG: Greater White-fronted Goose (Anser albifrons; ITIS: 175020),bird,6
+Larus glaucescens,Glaucous-winged Gull,176814,GWGU,NA,GWGU: Glaucous-winged Gull (Larus glaucescens; ITIS: 176814),bird,1993
+Larus heermanni,Heermann's Gull,176841,HEEG,NA,HEEG: Heermann's Gull (Larus heermanni; ITIS: 176841),bird,734
+Larus argentatus,Herring Gull,176824,HERG,NA,HERG: Herring Gull (Larus argentatus; ITIS: 176824),bird,314
+Catharus guttatus,Hermit Thrush,179779,HETH,NA,HETH: Hermit Thrush (Catharus guttatus; ITIS: 179779),bird,1
+Larus argetatus x glaucescens,Herring x Glaucous-winged Hybrid,174371,HGWH,NA,HGWH: Herring x Glaucous-winged Hybrid (Larus argetatus x glaucescens; ITIS: 174371),bird,8
+Podiceps auritus,Horned Grebe,174482,HOGR,NA,HOGR: Horned Grebe (Podiceps auritus; ITIS: 174482),bird,240
+Lophodytes cucullatus,Hooded Merganser,175183,HOME,NA,HOME: Hooded Merganser (Lophodytes cucullatus; ITIS: 175183),bird,2
+Fratercula corniculata,Horned Puffin,177029,HOPU,NA,HOPU: Horned Puffin (Fratercula corniculata; ITIS: 177029),bird,93
+Somateria spectabilis,King Eider,175160,KIEI,NA,KIEI: King Eider (Somateria spectabilis; ITIS: 175160),bird,1
+Phoebastria immutabilis,Laysan Albatross,554378,LAAL,NA,LAAL: Laysan Albatross (Phoebastria immutabilis; ITIS: 554378),bird,11
+Leucophaeus atricilla,Laughing Gull,824079,LAGU,NA,LAGU: Laughing Gull (Leucophaeus atricilla; ITIS: 824079),bird,1
+"Aves (gen, sp)",Bird (unidentified / non marine),178265,LAND,NA,"LAND: Bird (unidentified / non marine) (Aves (gen, sp); ITIS: 178265)",bird,5
+Numenius americanus,Long-billed Curlew,176593,LBCU,NA,LBCU: Long-billed Curlew (Numenius americanus; ITIS: 176593),bird,3
+Asio otus,Long-eared Owl,177932,LEOW,NA,LEOW: Long-eared Owl (Asio otus; ITIS: 177932),bird,1
+Calidris minutilla,Least Sandpiper,176656,LESA,NA,LESA: Least Sandpiper (Calidris minutilla; ITIS: 176656),bird,3
+Aythya affinis,Lesser Scaup,175134,LESC,NA,LESC: Lesser Scaup (Aythya affinis; ITIS: 175134),bird,22
+Oceanodroma leucorhoa,Leach's Storm-petrel,174628,LHSP,NA,LHSP: Leach's Storm-petrel (Oceanodroma leucorhoa; ITIS: 174628),bird,2
+Oceanodroma leucorhoa,Leach's Storm-Petrel,174628,LHSP,NA,LHSP: Leach's Storm-Petrel (Oceanodroma leucorhoa; ITIS: 174628),bird,7
+Gavia (sp),Loon (unidentified),174468,LOON,NA,LOON: Loon (unidentified) (Gavia (sp); ITIS: 174468),bird,39
+NA,Unidentified Loon,174467,LOON,NA,LOON: Unidentified Loon (NA; ITIS: 174467),bird,337
+Clangula hyemalis,Long-tailed Duck,175147,LTDU,NA,LTDU: Long-tailed Duck (Clangula hyemalis; ITIS: 175147),bird,1
+Stercoarius longicaudus,Long-tailed Jaeger,176794,LTJA,NA,LTJA: Long-tailed Jaeger (Stercoarius longicaudus; ITIS: 176794),bird,1
+Oceanodroma microsoma,Least Storm-petrel,174646,LTSP,NA,LTSP: Least Storm-petrel (Oceanodroma microsoma; ITIS: 174646),bird,1
+Limosa fedoa,Marbled Godwit,176686,MAGO,NA,MAGO: Marbled Godwit (Limosa fedoa; ITIS: 176686),bird,74
+Anas platyrhynchos,Mallard,175063,MALL,NA,MALL: Mallard (Anas platyrhynchos; ITIS: 175063),bird,18
+Brachyramphus marmoratus,Marbled Murrelet,176996,MAMU,NA,MAMU: Marbled Murrelet (Brachyramphus marmoratus; ITIS: 176996),bird,40
+Puffinus puffinus,Manx Shearwater,174555,MASH,NA,MASH: Manx Shearwater (Puffinus puffinus; ITIS: 174555),bird,3
+Larus canus,Mew Gull,176832,MEGU,NA,MEGU: Mew Gull (Larus canus; ITIS: 176832),bird,154
+Zenaida macroura,Mourning Dove,177125,MODO,NA,MODO: Mourning Dove (Zenaida macroura; ITIS: 177125),bird,1
+Synthliboramphus (sp),Murrelet (unidentified),177006,MURR,NA,MURR: Murrelet (unidentified) (Synthliboramphus (sp); ITIS: 177006),bird,1
+NA,Unknown,174371,NA,NA,NA: Unknown (NA; ITIS: 174371),bird,9774
+Colaptes auratus,Northern Flicker,178154,NOFL,NA,NOFL: Northern Flicker (Colaptes auratus; ITIS: 178154),bird,5
+Fulmarus glacialis,Northern Fulmar,174536,NOFU,NA,NOFU: Northern Fulmar (Fulmarus glacialis; ITIS: 174536),bird,16686
+Circus cyaneus,Northern Harrier,175430,NOHA,NA,NOHA: Northern Harrier (Circus cyaneus; ITIS: 175430),bird,2
+Mimus polyglottos,Northern Mockingbird,178620,NOMO,NA,NOMO: Northern Mockingbird (Mimus polyglottos; ITIS: 178620),bird,1
+Anas acuta,Northern Pintail,175074,NOPI,NA,NOPI: Northern Pintail (Anas acuta; ITIS: 175074),bird,18
+NA,Unidentified non-marine,174371,NPSS,NA,NPSS: Unidentified non-marine (NA; ITIS: 174371),bird,86
+Anas clypeata,Northern Shoveler,175096,NSHO,NA,NSHO: Northern Shoveler (Anas clypeata; ITIS: 175096),bird,2
+NA,No Survey,NA,NSNS,NA,NSNS: No Survey (NA; ITIS: NA),bird,106
+Pandion haliaetus,Osprey,175590,OSPR,NA,OSPR: Osprey (Pandion haliaetus; ITIS: 175590),bird,2
+Aethia psittacula,Parakeet Auklet,554029,PAAU,NA,PAAU: Parakeet Auklet (Aethia psittacula; ITIS: 554029),bird,8
+Stercorarius parasiticus,Parasitic Jaeger,176793,PAJA,NA,PAJA: Parasitic Jaeger (Stercorarius parasiticus; ITIS: 176793),bird,7
+Stercorarius parasiticus,Parasitic Jaeger,17693,PAJA,NA,PAJA: Parasitic Jaeger (Stercorarius parasiticus; ITIS: 17693),bird,8
+Gavia pacifica,Pacific Loon,174475,PALO,NA,PALO: Pacific Loon (Gavia pacifica; ITIS: 174475),bird,2200
+NA,Passerine,174371,PASS,NA,PASS: Passerine (NA; ITIS: 174371),bird,9
+Podilymbus podiceps,Pied-billed Grebe,174505,PBGR,NA,PBGR: Pied-billed Grebe (Podilymbus podiceps; ITIS: 174505),bird,3
+Phalacrocorax pelagicus,Pelagic Cormorant,174725,PECO,NA,PECO: Pelagic Cormorant (Phalacrocorax pelagicus; ITIS: 174725),bird,1038
+Calidris (sp),Small Shorebird (unidentified),176641,PEEP,NA,PEEP: Small Shorebird (unidentified) (Calidris (sp); ITIS: 176641),bird,8
+Falco peregrinus,Peregrine Falcon,175604,PEFA,NA,PEFA: Peregrine Falcon (Falco peregrinus; ITIS: 175604),bird,7
+Puffinus creatopus,Pink-footed Shearwater,174547,PFSH,NA,PFSH: Pink-footed Shearwater (Puffinus creatopus; ITIS: 174547),bird,82
+Phalaropus (sp),Phalarope (unidentified),176733,PHAL,NA,PHAL: Phalarope (unidentified) (Phalaropus (sp); ITIS: 176733),bird,2
+Phalaropus,Unidentified Phalarope,176733,PHAL,NA,PHAL: Unidentified Phalarope (Phalaropus; ITIS: 176733),bird,10
+Podilymbus podiceps,Pied-billed Grebe,174505,PIGR,NA,PIGR: Pied-billed Grebe (Podilymbus podiceps; ITIS: 174505),bird,13
+Cepphus columba,Pigeon Guillemot,176991,PIGU,NA,PIGU: Pigeon Guillemot (Cepphus columba; ITIS: 176991),bird,1224
+Dryocopus pileatus,Pileated Woodpecker,178166,PIWO,NA,PIWO: Pileated Woodpecker (Dryocopus pileatus; ITIS: 178166),bird,1
+Stercorarius pomarinus,Pomarine Jaeger,176792,POJA,NA,POJA: Pomarine Jaeger (Stercorarius pomarinus; ITIS: 176792),bird,23
+Procellariidae,Unidentified Procellarid,174532,PROC,NA,PROC: Unidentified Procellarid (Procellariidae; ITIS: 174532),bird,108
+Empidonax difficilis,Pacific-slope Flycatcher,178348,PSFL,NA,PSFL: Pacific-slope Flycatcher (Empidonax difficilis; ITIS: 178348),bird,1
+Falconiformes (gen sp),Raptor (unidentified),175262,RAPT,NA,RAPT: Raptor (unidentified) (Falconiformes (gen sp); ITIS: 175262),bird,9
+NA,Unidentified Raptor,174371,RAPT,NA,RAPT: Unidentified Raptor (NA; ITIS: 174371),bird,42
+Larus delawarensis,Ring-billed Gull,176830,RBGU,NA,RBGU: Ring-billed Gull (Larus delawarensis; ITIS: 176830),bird,222
+Mergus serrator,Red-breasted Merganser,175187,RBME,NA,RBME: Red-breasted Merganser (Mergus serrator; ITIS: 175187),bird,7
+Gallus gallus,Red Junglefowl,176086,REJU,NA,REJU: Red Junglefowl (Gallus gallus; ITIS: 176086),bird,26
+Phalaropus fulicarius,Red Phalarope,176734,REPH,NA,REPH: Red Phalarope (Phalaropus fulicarius; ITIS: 176734),bird,171
+Cerorhinca monocerata,Rhinoceros Auklet,177023,RHAU,NA,RHAU: Rhinoceros Auklet (Cerorhinca monocerata; ITIS: 177023),bird,1511
+Podiceps grisegena,Red-necked Grebe,174479,RNGR,NA,RNGR: Red-necked Grebe (Podiceps grisegena; ITIS: 174479),bird,38
+Phalaropus lobatus,Red-necked Phalarope,176735,RNPH,NA,RNPH: Red-necked Phalarope (Phalaropus lobatus; ITIS: 176735),bird,48
+Chen rossii,Ross's Goose,175041,ROGO,NA,ROGO: Ross's Goose (Chen rossii; ITIS: 175041),bird,3
+Columba livia,Rock Pigeon,177071,ROPI,NA,ROPI: Rock Pigeon (Columba livia; ITIS: 177071),bird,150
+Sterna maxima,Royal Tern,176922,ROTE,NA,ROTE: Royal Tern (Sterna maxima; ITIS: 176922),bird,1
+Buteo lineatus,Red-shouldered Hawk,175359,RSHA,NA,RSHA: Red-shouldered Hawk (Buteo lineatus; ITIS: 175359),bird,1
+Buteo jamaicensis,Red-tailed Hawk,175350,RTHA,NA,RTHA: Red-tailed Hawk (Buteo jamaicensis; ITIS: 175350),bird,44
+Gavia stellata,Red-throated Loon,174474,RTLO,NA,RTLO: Red-throated Loon (Gavia stellata; ITIS: 174474),bird,444
+Oxyura jamaicensis,Ruddy Duck,175175,RUDU,NA,RUDU: Ruddy Duck (Oxyura jamaicensis; ITIS: 175175),bird,58
+Agelaius phoeniceus,Red-winged Blackbird,179045,RWBL,NA,RWBL: Red-winged Blackbird (Agelaius phoeniceus; ITIS: 179045),bird,4
+Larus Linnaeus,Sabine's Gull,176803,SAGU,NA,SAGU: Sabine's Gull (Larus Linnaeus; ITIS: 176803),bird,1
+Xema sabini,Sabine's Gull,176866,SAGU,NA,SAGU: Sabine's Gull (Xema sabini; ITIS: 176866),bird,9
+Calidris alba,Sanderling,176669,SAND,NA,SAND: Sanderling (Calidris alba; ITIS: 176669),bird,22
+Synthliboramphus scrippsi,Scripp's Murrelet,174371,SCMU,NA,SCMU: Scripp's Murrelet (Synthliboramphus scrippsi; ITIS: 174371),bird,1
+Melanitta (sp),Scoter (unidentified),175162,SCOT,NA,SCOT: Scoter (unidentified) (Melanitta (sp); ITIS: 175162),bird,20
+Melanitta,Unidentified Scoter,175162,SCOT,NA,SCOT: Unidentified Scoter (Melanitta; ITIS: 175162),bird,276
+"Aves (gen, sp)",Marine Bird (unidentified),174371,SEAB,NA,"SEAB: Marine Bird (unidentified) (Aves (gen, sp); ITIS: 174371)",bird,207
+Asio flammeus,Short-eared Owl,177935,SEOW,NA,SEOW: Short-eared Owl (Asio flammeus; ITIS: 177935),bird,2
+Charadrius semipalmatus,Semipalmated Plover,176506,SEPL,NA,SEPL: Semipalmated Plover (Charadrius semipalmatus; ITIS: 176506),bird,1
+Synthliboramphus scrippsi/hypoleucus,Scripps/Guadalupe Murrelet,174371,SGMU,NA,SGMU: Scripps/Guadalupe Murrelet (Synthliboramphus scrippsi/hypoleucus; ITIS: 174371),bird,3
+"Puffinus (gen,sp.)",Unidentified Shearwater,174543,SHEA,NA,"SHEA: Unidentified Shearwater (Puffinus (gen,sp.); ITIS: 174543)",bird,2
+Charadriiformes (gen sp),Large Shorebird (unidentified),174371,SHOR,NA,SHOR: Large Shorebird (unidentified) (Charadriiformes (gen sp); ITIS: 174371),bird,23
+NA,Unidentified Shorebird,174371,SHOR,NA,SHOR: Unidentified Shorebird (NA; ITIS: 174371),bird,244
+Puffinus tenuirostris,Short-tailed Shearwater,174554,SHOS,NA,SHOS: Short-tailed Shearwater (Puffinus tenuirostris; ITIS: 174554),bird,71
+Puffinus,Unidentified Shearwater,174543,SHSP,NA,SHSP: Unidentified Shearwater (Puffinus; ITIS: 174543),bird,167
+Egretta thula,Snowy Egret,174813,SNEG,NA,SNEG: Snowy Egret (Egretta thula; ITIS: 174813),bird,8
+Chen caerulescens,Snow Goose,175038,SNGO,NA,SNGO: Snow Goose (Chen caerulescens; ITIS: 175038),bird,1
+Charadrius nivosus,Snowy Plover,824030,SNPL,NA,SNPL: Snowy Plover (Charadrius nivosus; ITIS: 824030),bird,1
+Puffinus griseus,Sooty Shearwater,174553,SOSH,NA,SOSH: Sooty Shearwater (Puffinus griseus; ITIS: 174553),bird,5667
+Melospiza melodia,Song Sparrow,179492,SOSP,NA,SOSP: Song Sparrow (Melospiza melodia; ITIS: 179492),bird,1
+Stercorarius maccormicki,South Polar Skua,660062,SPSK,NA,SPSK: South Polar Skua (Stercorarius maccormicki; ITIS: 660062),bird,1
+Oceanodroma,Unidentified Storm-petrel,174624,SPSP,NA,SPSP: Unidentified Storm-petrel (Oceanodroma; ITIS: 174624),bird,15
+Puffinus tenuirostris,Short-tailed Shearwater,174554,SRTS,NA,SRTS: Short-tailed Shearwater (Puffinus tenuirostris; ITIS: 174554),bird,96
+Accipiter striatus,Sharp-shinned Hawk,175304,SSHA,NA,SSHA: Sharp-shinned Hawk (Accipiter striatus; ITIS: 175304),bird,1
+Puffinus griseus/tentuiro.,Sooty/Short-tailed Shearwater,174371,SSTS,NA,SSTS: Sooty/Short-tailed Shearwater (Puffinus griseus/tentuiro.; ITIS: 174371),bird,27
+Aphriza virgata,Surfbird,176673,SURF,NA,SURF: Surfbird (Aphriza virgata; ITIS: 176673),bird,2
+Melanitta perspicillata,Surf Scoter,175170,SUSC,NA,SUSC: Surf Scoter (Melanitta perspicillata; ITIS: 175170),bird,2420
+Uria lomvia,Thick-billed Murre,176978,TBMU,NA,TBMU: Thick-billed Murre (Uria lomvia; ITIS: 176978),bird,3
+Sterna (sp),Tern (unidentified),174371,TERN,NA,TERN: Tern (unidentified) (Sterna (sp); ITIS: 174371),bird,1
+Sterna,Unidentified Tern,176885,TERN,NA,TERN: Unidentified Tern (Sterna; ITIS: 176885),bird,33
+Larus thayeri,Thayer's Gull,176828,THGU,NA,THGU: Thayer's Gull (Larus thayeri; ITIS: 176828),bird,58
+Fratercula cirrhata,Tufted Puffin,177032,TUPU,NA,TUPU: Tufted Puffin (Fratercula cirrhata; ITIS: 177032),bird,47
+Cygnus columbianus,Tundra Swan,174987,TUSW,NA,TUSW: Tundra Swan (Cygnus columbianus; ITIS: 174987),bird,2
+Cathartes aura,Turkey Vulture,175265,TUVU,NA,TUVU: Turkey Vulture (Cathartes aura; ITIS: 175265),bird,20
+NA,Unidentified Bird,174371,UNID,NA,UNID: Unidentified Bird (NA; ITIS: 174371),bird,959
+Stercorarius,Unidentified Jaeger,176791,UNJA,NA,UNJA: Unidentified Jaeger (Stercorarius; ITIS: 176791),bird,2
+Rallus limicola,Virginia Rail,176221,VIRA,NA,VIRA: Virginia Rail (Rallus limicola; ITIS: 176221),bird,2
+Tringa incana,Wandering Tattler,176630,WATA,NA,WATA: Wandering Tattler (Tringa incana; ITIS: 176630),bird,1
+Aechmophorus occident./clarkii,Western/Clark's Grebe,174502,WCGR,NA,WCGR: Western/Clark's Grebe (Aechmophorus occident./clarkii; ITIS: 174502),bird,1842
+Aechmophorus occidentalis,Western Grebe,174503,WEGR,NA,WEGR: Western Grebe (Aechmophorus occidentalis; ITIS: 174503),bird,4926
+Larus occidentalis,Western Gull,176817,WEGU,NA,WEGU: Western Gull (Larus occidentalis; ITIS: 176817),bird,7944
+Calidris mauri,Western Sandpiper,176668,WESA,NA,WESA: Western Sandpiper (Calidris mauri; ITIS: 176668),bird,6
+Larus occid. x gluaces.,Western X Glaucous-winged Gull Hybrid,174371,WGWH,NA,WGWH: Western X Glaucous-winged Gull Hybrid (Larus occid. x gluaces.; ITIS: 174371),bird,171
+Numenius phaeopus,Whimbrel,176599,WHIM,NA,WHIM: Whimbrel (Numenius phaeopus; ITIS: 176599),bird,19
+Tringa semipalmata,Willet,824147,WILL,NA,WILL: Willet (Tringa semipalmata; ITIS: 824147),bird,83
+Pelecanus erythrorhynchos,White Pelican,174684,WIPE,NA,WIPE: White Pelican (Pelecanus erythrorhynchos; ITIS: 174684),bird,3
+Meleagris gallopavo,Wild Turkey,176136,WITU,NA,WITU: Wild Turkey (Meleagris gallopavo; ITIS: 176136),bird,3
+Melanitta fusca,White-winged Scoter,175163,WWSC,NA,WWSC: White-winged Scoter (Melanitta fusca; ITIS: 175163),bird,91
+Synthliboramphus hypoleucus,Xantus's Murrelet,177011,XAMU,NA,XAMU: Xantus's Murrelet (Synthliboramphus hypoleucus; ITIS: 177011),bird,4
+Gavia adamsii,Yellow-billed Loon,174470,YBLO,NA,YBLO: Yellow-billed Loon (Gavia adamsii; ITIS: 174470),bird,3
+Arctocephalus townsendi,Guadalupe Fur Seal,180636,ARTO,NA,ARTO: Guadalupe Fur Seal (Arctocephalus townsendi; ITIS: 180636),mammal,2
+Callorhinus ursinus,Northern Fur Seal,180627,CAUR,NA,CAUR: Northern Fur Seal (Callorhinus ursinus; ITIS: 180627),mammal,25
+Delphinus capensis capensis,Long-beacked Common Dolphin,771148,DECA,NA,DECA: Long-beacked Common Dolphin (Delphinus capensis capensis; ITIS: 771148),mammal,5
+Grampus griseus,Risso's Dolphin,180457,DEDE,NA,DEDE: Risso's Dolphin (Grampus griseus; ITIS: 180457),mammal,1
+Delphinidae,Unidentified Dolphin,180415,DOLH,NA,DOLH: Unidentified Dolphin (Delphinidae; ITIS: 180415),mammal,23
+Enhydra lutris nereis,Sea Otter,202390,ENLU,NA,ENLU: Sea Otter (Enhydra lutris nereis; ITIS: 202390),mammal,304
+Eschrichtius robustus,Gray Whale,180521,ESRO,NA,ESRO: Gray Whale (Eschrichtius robustus; ITIS: 180521),mammal,24
+Eumetopias jubatus,Steller's Sea Lion,180625,EUJU,NA,EUJU: Steller's Sea Lion (Eumetopias jubatus; ITIS: 180625),mammal,13
+Lissodelphis borealis,Northern Right Whale Dolphin,180454,LAOB,NA,LAOB: Northern Right Whale Dolphin (Lissodelphis borealis; ITIS: 180454),mammal,6
+Delphinus delphis,Short-beacked Common Dolphin,180438,LIBO,NA,LIBO: Short-beacked Common Dolphin (Delphinus delphis; ITIS: 180438),mammal,2
+Mirounga angustirostris,Northern Elephant Seal,180672,MIAN,NA,MIAN: Northern Elephant Seal (Mirounga angustirostris; ITIS: 180672),mammal,371
+Odontoceti,Unidentified Toothed Whale,180404,ODON,NA,ODON: Unidentified Toothed Whale (Odontoceti; ITIS: 180404),mammal,30
+Otariidae,Unidentified Otariid,180615,OTAR,NA,OTAR: Unidentified Otariid (Otariidae; ITIS: 180615),mammal,393
+Phocoenoides dalli dalli,Dall's Porpoise,612623,PHDA,NA,PHDA: Dall's Porpoise (Phocoenoides dalli dalli; ITIS: 612623),mammal,2
+Phocidae,Unidentified Phocid,180640,PHOC,NA,PHOC: Unidentified Phocid (Phocidae; ITIS: 180640),mammal,134
+Phocoena phocoena,Harbor Porpoise,180473,PHPH,NA,PHPH: Harbor Porpoise (Phocoena phocoena; ITIS: 180473),mammal,201
+Phoca vitulina,Harbor Seal,180649,PHVI,NA,PHVI: Harbor Seal (Phoca vitulina; ITIS: 180649),mammal,763
+Caniformia,Unidentified Pinniped,552303,PINN,NA,PINN: Unidentified Pinniped (Caniformia; ITIS: 552303),mammal,650
+Phocoenidae,Unidentified Porpoise,552307,PORP,NA,PORP: Unidentified Porpoise (Phocoenidae; ITIS: 552307),mammal,49
+Tursiops truncatus truncatus,Bottlenose Dolphin,612621,TUTR,NA,TUTR: Bottlenose Dolphin (Tursiops truncatus truncatus; ITIS: 612621),mammal,1
+Delphinus,Unidentified Common Dolphin,180437,UNDE,NA,UNDE: Unidentified Common Dolphin (Delphinus; ITIS: 180437),mammal,6
+NA,Unidentified Marine Mammal,NA,UNMM,NA,UNMM: Unidentified Marine Mammal (NA; ITIS: NA),mammal,9
+Cetacea,Unidentified Whale,180403,WHAL,NA,WHAL: Unidentified Whale (Cetacea; ITIS: 180403),mammal,41
+Zalophus californianus,California Sea Lion,180621,ZACA,NA,ZACA: California Sea Lion (Zalophus californianus; ITIS: 180621),mammal,3998
+Ziphius cavirostris,Cuviers Beaked Whale,180498,ZICA,NA,ZICA: Cuviers Beaked Whale (Ziphius cavirostris; ITIS: 180498),mammal,11
+NA,NA,NA,NA,NA,NA: NA (NA; ITIS: NA),NA,2917
