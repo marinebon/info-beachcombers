@@ -56,6 +56,7 @@ segs_geo   <- glue("{dir_data}/{d_id}_segments.geojson")
 d_spp_csv  <- glue("{dir_data}/{d_id}_species.csv")
 cols_bo19_csv       <- glue("{dir_data}/cols_bo19.csv")
 cols_bm16tobo19_csv <- glue("{dir_data}/cols_bm16tobo19.csv")
+d_mbnms_csv <- glue("{dir_data}/BeachCOMBERS_MBNMS.csv")
 
 Sys.setenv(RERDDAP_DEFAULT_URL = erddap_url)
 
@@ -242,6 +243,22 @@ d_nms_buf <- d %>%
   semi_join(
     nms_buf_segs, by = "beach_segment_code")
 
+# write to csv
+d_mbnms <- d_nms_buf %>% 
+  mutate(
+    year = year(time)) %>% 
+  group_by(
+    year,
+    carcass_present, bird_or_mammal, 
+    species_code, species_sci_name, species_common_name, species_itis, species, 
+    age_class, sex, condition, cause_of_death, alive) %>% 
+  summarize(
+    n = n()) %>% 
+  ungroup()
+write_csv(d_mbnms, d_mbnms_csv)
+
+d_mbnms <- read_csv(d_mbnms_csv)
+
 m2 <- mapview(nms_ply_buf) +
   mapview(nms_buf_segs, color="green")
 
@@ -258,15 +275,13 @@ Filter by `beach_segment_code` in MBNMS: `r format(nrow(d_nms_buf), big.mark=","
 #### static
 
 ```{r}
-g_birds <- d_nms_buf %>% 
+g_birds <- d_mbnms %>% 
   filter(
     bird_or_mammal == "bird",
     carcass_present == T) %>% 
-  mutate(
-    year = year(time)) %>% 
   group_by(year) %>% 
   summarize(
-    n = n()) %>% 
+    n = sum(n)) %>% 
   ungroup() %>% 
   ggplot(aes(x=year, y=n)) + 
   #geom_bar(stat = "identity") #+ 
@@ -280,14 +295,13 @@ print(g_birds)
 
 ```{r}
 #plot.new()
-g_bird_spp <- d_nms_buf %>% 
+g_bird_spp <- d_mbnms %>% 
   filter(
     bird_or_mammal == "bird",
     carcass_present == T) %>% 
-  mutate(
-    year = year(time)) %>% 
   group_by(year, species) %>% 
-  summarize(n = n()) %>% 
+  summarize(
+    n = sum(n)) %>% 
   ungroup() %>% 
   ggplot(aes(x=year, y=n, fill=species)) + 
   #geom_bar(stat = "identity") + 
@@ -298,24 +312,19 @@ g_bird_spp <- d_nms_buf %>%
 ggplotly(g_bird_spp)
 ```
 
-
-
-
 ### mammal carcasses
 
 #### static
 
 ```{r}
-g_mammal <- d_nms_buf %>% 
+g_mammal <- d_mbnms %>% 
   filter(
     bird_or_mammal == "mammal",
     carcass_present == T) %>% 
-  mutate(
-    year = year(time)) %>% 
   group_by(year) %>% 
   summarize(
-    n = n()) %>% 
-  ungroup() %>% 
+    n = sum(n)) %>% 
+  ungroup() %>%  
   ggplot(aes(x=year, y=n)) + 
   #geom_bar(stat = "identity") #+ 
   geom_col() #+ 
@@ -328,14 +337,13 @@ print(g_mammal)
 
 ```{r}
 #plot.new()
-g_mammal_spp <- d_nms_buf %>% 
+g_mammal_spp <- d_mbnms %>% 
   filter(
     bird_or_mammal == "mammal",
     carcass_present == T) %>% 
-  mutate(
-    year = year(time)) %>% 
-  group_by(year, species) %>% 
-  summarize(n = n()) %>% 
+ group_by(year, species) %>% 
+  summarize(
+    n = sum(n)) %>% 
   ungroup() %>% 
   ggplot(aes(x=year, y=n, fill=species)) + 
   #geom_bar(stat = "identity") + 
